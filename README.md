@@ -6,20 +6,18 @@
     <img src="https://img.shields.io/github/package-json/v/UnchartedBull/OctoDash/main?style=for-the-badge">
     <img src="https://img.shields.io/github/downloads/UnchartedBull/OctoDash/latest/total?color=lightgrey&style=for-the-badge">
     <br>
-    <b>OctoDash is a simple, but beautiful dashboard for OctoPrint. Please read the instructions carefully!</b><br />
-    OctoDash is a User Interface for OctoPrint, it utilizes the OctoPrint API but tries to use modern design principles in order to fully enable the power of your Raspberry Pi attached to your 3D Printer. OctoDash works best with a Touchscreen and will support almost all functions that OctoPrint offers just in a nicer format. Give it a try!
+    <b>OctoDash+ is a simple, but beautiful dashboard for OctoPrint. Please read the instructions carefully!</b><br />
+    OctoDash+ is a User Interface for OctoPrint, it utilizes the OctoPrint API but tries to use modern design principles in order to fully enable the power of your Raspberry Pi attached to your 3D Printer. OctoDash works best with a Touchscreen and will support almost all functions that OctoPrint offers just in a nicer format. Give it a try!
 </p>
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-  - [Nightly Builds](#nightly-builds)
 - [Update](#update)
 - [Tips and Tricks](#tips-and-tricks)
 - [Demo](#demo)
 - [Screenshots](#screenshots)
-- [Get in contact](#get-in-contact)
 - [Troubleshooting](#troubleshooting)
 - [Bugs and more](#bugs-and-more)
 - [Contributing](#contributing)
@@ -28,18 +26,14 @@
 ## Installation
 
 ```
-bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/main/scripts/install.sh)
+bash <(wget -qO- https://github.com/meowmeowahr/OctoDash/raw/main/scripts/install.sh)
 ```
 
-_Execute this command as the user that logs in on the display (usually `pi`) and not as `root` or with `sudo`._ For more options and information have a look at the [wiki](https://github.com/UnchartedBull/OctoDash/wiki/Installation).
+_Execute this command as the user that logs in on the display (usually `pi`) and not as `root` or with `sudo`._ For more options and information have a look at the [wiki](https://github.com/meowmeowahr/OctoDash/wiki/Installation).
 
-No Keyboard? [No Problem](https://github.com/UnchartedBull/OctoDash/wiki/Setup-&-Settings#setup-without-keyboard).
+No Keyboard? [No Problem](https://github.com/meowmeowahr/OctoDash/wiki/Setup-&-Settings#setup-without-keyboard).
 
-Having issues during the installation? Please have a look at the [Troubleshooting Guide](https://github.com/UnchartedBull/OctoDash/wiki/Troubleshooting) first.
-
-### Nightly Builds
-
-Thanks to M1dn1ghtN1nj4 nightly builds are available here: https://sites.google.com/view/m1dn1ght-3d/downloads/unofficial-octodash-builds?authuser=0. They should be stable, still not recommended for production.
+Having issues during the installation? Please have a look at the [Troubleshooting Guide](https://github.com/meowmeowahr/OctoDash/wiki/Troubleshooting) first.
 
 ## Tips and Tricks
 
@@ -75,15 +69,11 @@ If you want to see OctoDash in action, here is an awesome video from Nick on [Yo
     <img src="https://raw.githubusercontent.com/TimonGaebelein/OctoprintDash/main/screenshots/settings.png" width="49.5%" alt-text="Settings">
 </p>
 
-More Screenshots can be found [here](https://github.com/UnchartedBull/OctoDash/tree/main/screenshots).
-
-## Get in contact
-
-We now have a Discord server as well. Feel free to join and ask your support & development questions over there: https://discord.gg/gTasZTz.
+More Screenshots can be found [here](https://github.com/meowmeowahr/OctoDash/tree/main/screenshots).
 
 ## Troubleshooting
 
-If you encounter an issue, while using OctoDash please have a look at the [wiki](https://github.com/UnchartedBull/OctoDash/wiki/Troubleshooting) first! If your issue is not covered please open an issue!
+If you encounter an issue, while using OctoDash please have a look at the [wiki](https://github.com/meowmeowahr/OctoDash/wiki/Troubleshooting) first! If your issue is not covered please open an issue!
 
 ## Bugs and more
 
@@ -91,8 +81,8 @@ If you find a bug, please open an issue, so I can have a look at it. Please also
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/UnchartedBull/OctoDash/blob/main/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/meowmeowahr/OctoDash/blob/main/CONTRIBUTING.md).
 
 ## License
 
-The project is licensed under the Apache 2.0 License. [More Information](https://github.com/UnchartedBull/OctoDash/blob/main/LICENSE.md).
+The project is licensed under the Apache 2.0 License. [More Information](https://github.com/meowmeowahr/OctoDash/blob/main/LICENSE.md).
