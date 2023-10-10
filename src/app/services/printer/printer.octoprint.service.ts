@@ -12,6 +12,7 @@ import {
   GCodeCommand,
   JogCommand,
   OctoprintPrinterProfiles,
+  OctoprintSettigsProfile,
   TemperatureHeatbedCommand,
   TemperatureHotendCommand,
 } from '../../model/octoprint';
@@ -39,6 +40,13 @@ export class PrinterOctoprintService implements PrinterService {
           }
         }),
       );
+  }
+
+  public getWebCamUrl(returnFunction): void {
+    this.http.get<OctoprintSettigsProfile>(this.configService.getApiURL('settings'), this.configService.getHTTPHeaders())
+    .subscribe((response) => {
+      returnFunction(response["webcam"]["streamUrl"])
+    });
   }
 
   saveToEPROM(): void {

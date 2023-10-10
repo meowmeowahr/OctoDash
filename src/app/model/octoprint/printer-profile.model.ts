@@ -11,6 +11,10 @@ export interface OctoprintPrinterProfile {
   axes: OctoprintPrinterAxis;
 }
 
+export interface OctoprintSettigsProfile {
+  webcam: JSON;
+}
+
 interface OctoprintPrinterAxis {
   x: OctoprintAxisDetails;
   y: OctoprintAxisDetails;

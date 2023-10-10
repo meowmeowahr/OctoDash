@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConfigInvalidComponent } from './config/invalid/invalid.component';
 import { ConfigSetupComponent } from './config/setup/setup.component';
 import { ControlComponent } from './control/control.component';
+import { MonitorComponent } from './monitor/monitor.component';
 import { FilamentComponent } from './filament/filament.component';
 import { FilesComponent } from './files/files.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'control',
     component: ControlComponent,
+  },
+  {
+    path: 'monitor',
+    component: MonitorComponent,
   },
   {
     path: 'filament',

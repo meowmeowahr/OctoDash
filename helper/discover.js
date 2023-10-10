@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable import/no-commonjs */
 
-const compareVersions = require('compare-versions');
+const compareVersions = require('compare-versions').compareVersions;
 const exec = require('child_process').exec;
 
 const minimumVersion = '1.3.5';
