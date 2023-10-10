@@ -58,4 +58,8 @@ export class ControlComponent {
 
     this.printerService.jog(axis === 'x' ? distance : 0, axis === 'y' ? distance : 0, axis === 'z' ? distance : 0);
   }
+
+  public homeAxes(axes: string): void {
+    this.printerService.executeGCode('G28 ' + axes)
+  }
 }

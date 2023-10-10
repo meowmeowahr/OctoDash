@@ -16,7 +16,7 @@
 <div class="control">
   <div class="control__jog">
     <div class="control__jog-arrows">
-      <div class="control__jog-arrows__XY">
+      <!-- <div class="control__jog-arrows__XY">
         <div class="control__jog-arrows__XY__wrapper">
           <fa-icon
             [icon]="['fas', 'angle-up']"
@@ -96,7 +96,90 @@
           ></fa-icon>
         </div>
         <span class="control__heading">E</span>
-      </div>
+      </div> -->
+      <fa-icon
+        [icon]="['fas', 'angle-up']"
+        class="control__icon control__icon-1"
+        (click)="moveAxis('y', '-')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'angle-left']"
+        class="control__icon control__icon-2"
+        (click)="moveAxis('x', '-')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'angle-right']"
+        class="control__icon control__icon-3"
+        (click)="moveAxis('x', '+')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'angle-down']"
+        class="control__icon control__icon-4"
+        (click)="moveAxis('y', '+')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'home']"
+        class="control__icon control__icon-5"
+        (click)="homeAxes('xy')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <span class="control__heading control__heading-1">X / Y</span>
+      <fa-icon
+        [icon]="['fas', 'angle-up']"
+        class="control__icon control__icon-6"
+        (click)="moveAxis('z', '+')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'angle-down']"
+        class="control__icon control__icon-7"
+        (click)="moveAxis('z', '-')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'home']"
+        class="control__icon control__icon-8"
+        (click)="homeAxes('z')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <span class="control__heading control__heading-2">Z</span>
+      <fa-icon
+        [icon]="['fas', 'redo-alt']"
+        class="control__icon control__icon-9"
+        (click)="extrude('+')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <fa-icon
+        [icon]="['fas', 'undo-alt']"
+        class="control__icon control__icon-10"
+        (click)="extrude('-')"
+        matRipple
+        [matRippleUnbounded]="true"
+        [matRippleCentered]="true"
+      ></fa-icon>
+      <span class="control__heading control__heading-3">E</span>
     </div>
 
     <div class="control__distance-wrapper">

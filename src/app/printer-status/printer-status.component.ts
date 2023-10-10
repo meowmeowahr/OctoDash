@@ -80,7 +80,7 @@ export class PrinterStatusComponent implements OnInit, OnDestroy {
     event.stopPropagation();
   }
 
-  public quickControlChangeValue(value: number): void {
+  public quickControlChangeValue(value: string): void {
     switch (this.view) {
       case QuickControlView.HOTEND:
         this.changeTemperatureHotend(value);
@@ -108,36 +108,66 @@ export class PrinterStatusComponent implements OnInit, OnDestroy {
     }
   }
 
-  private changeTemperatureHotend(value: number): void {
-    this.hotendTarget += value;
-    if (this.hotendTarget < -999) {
-      this.hotendTarget = this.configService.getDefaultHotendTemperature();
-    } else if (this.hotendTarget < 0) {
+  private changeTemperatureHotend(value: string): void {
+    if (value == '-') {
+      this.hotendTarget = parseInt(this.hotendTarget.toString().slice(0,-1))
+    } else if (value == 't') {
+      this.hotendTarget += -1000;
+      if (this.hotendTarget < -999) {
+        this.hotendTarget = this.configService.getDefaultHotendTemperature();
+      } else if (this.hotendTarget < 0) {
+        this.hotendTarget = 0;
+      }
+    } else {
+      this.hotendTarget = parseInt(this.hotendTarget.toString() + value)
+    }
+
+    if (Number.isNaN(this.hotendTarget)) {
       this.hotendTarget = 0;
     } else if (this.hotendTarget > 999) {
-      this.hotendTarget = 999;
+      this.hotendTarget = 999
     }
   }
 
-  private changeTemperatureHeatbed(value: number): void {
-    this.heatbedTarget += value;
-    if (this.heatbedTarget < -999) {
-      this.heatbedTarget = this.configService.getDefaultHeatbedTemperature();
-    } else if (this.heatbedTarget < 0) {
+  private changeTemperatureHeatbed(value: string): void {
+    if (value == '-') {
+      this.heatbedTarget = parseInt(this.heatbedTarget.toString().slice(0,-1))
+    } else if (value == 't') {
+      this.heatbedTarget += -1000;
+      if (this.heatbedTarget < -999) {
+        this.heatbedTarget = this.configService.getDefaultHeatbedTemperature();
+      } else if (this.heatbedTarget < 0) {
+        this.heatbedTarget = 0;
+      }
+    } else {
+      this.heatbedTarget = parseInt(this.heatbedTarget.toString() + value)
+    } 
+
+    if (Number.isNaN(this.heatbedTarget)) {
       this.heatbedTarget = 0;
     } else if (this.heatbedTarget > 999) {
-      this.heatbedTarget = 999;
+      this.heatbedTarget = 999
     }
   }
 
-  private changeSpeedFan(value: number): void {
-    this.fanTarget += value;
-    if (this.fanTarget < -999) {
-      this.fanTarget = this.configService.getDefaultFanSpeed();
-    } else if (this.fanTarget < 0) {
-      this.fanTarget = 0;
+  private changeSpeedFan(value: string): void {
+    if (value == '-') {
+      this.fanTarget = parseInt(this.fanTarget.toString().slice(0,-1))
+    } else if (value == 't') {
+      this.fanTarget += -1000;
+      if (this.fanTarget < -999) {
+        this.fanTarget = this.configService.getDefaultFanSpeed();
+      } else if (this.fanTarget < 0) {
+        this.fanTarget = 0;
+      }
+    }else {
+      this.fanTarget = parseInt(this.fanTarget.toString() + value)
+    }
+
+    if (Number.isNaN(this.fanTarget)) {
+      this.hotendTarget = 0;
     } else if (this.fanTarget > 100) {
-      this.fanTarget = 100;
+      this.fanTarget = 100
     }
   }
 

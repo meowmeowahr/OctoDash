@@ -70,30 +70,11 @@
   </table>
 
   <div class="quick-control__controller" (click)="stopPropagation($event)">
-    <div class="quick-control__controller-row">
-      <div
-        class="quick-control__controller-increase"
-        (click)="quickControlChangeValue(1)"
-        matRipple
-        [matRippleUnbounded]="false"
-      >
-        +1
-      </div>
-      <div
-        class="quick-control__controller-increase"
-        (click)="quickControlChangeValue(10)"
-        matRipple
-        [matRippleUnbounded]="false"
-      >
-        +10
-      </div>
-    </div>
-
     <div
       class="quick-control__controller-value"
       colspan="2"
       *ngIf="view === QuickControlView.HOTEND"
-      (click)="quickControlChangeValue(-1000)"
+      (click)="quickControlChangeValue('t')"
       matRipple
       [matRippleUnbounded]="false"
     >
@@ -103,7 +84,7 @@
       class="quick-control__controller-value"
       colspan="2"
       *ngIf="view === QuickControlView.HEATBED"
-      (click)="quickControlChangeValue(-1000)"
+      (click)="quickControlChangeValue('t')"
       matRipple
       [matRippleUnbounded]="false"
     >
@@ -113,7 +94,7 @@
       class="quick-control__controller-value"
       colspan="2"
       *ngIf="view === QuickControlView.FAN"
-      (click)="quickControlChangeValue(-1000)"
+      (click)="quickControlChangeValue('t')"
       matRipple
       [matRippleUnbounded]="false"
     >
@@ -123,20 +104,104 @@
 
     <div class="quick-control__controller-row">
       <div
-        class="quick-control__controller-decrease"
-        (click)="quickControlChangeValue(-1)"
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('7')"
         matRipple
         [matRippleUnbounded]="false"
       >
-        -1
+        7
       </div>
       <div
-        class="quick-control__controller-decrease"
-        (click)="quickControlChangeValue(-10)"
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('8')"
         matRipple
         [matRippleUnbounded]="false"
       >
-        -10
+        8
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('9')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        9
+      </div>
+    </div>
+
+    <div class="quick-control__controller-row">
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('4')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        4
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('5')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        5
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('6')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        6
+      </div>
+    </div>
+
+    <div class="quick-control__controller-row">
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('1')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        1
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('2')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        2
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('3')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        3
+      </div>
+    </div>
+
+    <div class="quick-control__controller-row">
+      <div class="quick-control__controller-key"> </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('0')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        0
+      </div>
+      <div
+        class="quick-control__controller-key"
+        (click)="quickControlChangeValue('-')"
+        matRipple
+        [matRippleUnbounded]="false"
+      >
+        <fa-icon
+          [icon]="['fas', 'backspace']"
+        ></fa-icon>
       </div>
     </div>
 
